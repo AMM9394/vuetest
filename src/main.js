@@ -139,20 +139,20 @@ Vue.use(Aside);
 Vue.use(Main);
 Vue.use(Footer);
 
-Vue.use(Loading.directive);
+// Vue.use(Loading.directive);
 
-Vue.prototype.$loading = Loading.service;
+/*Vue.prototype.$loading = Loading.service;
 Vue.prototype.$msgbox = MessageBox;
 Vue.prototype.$alert = MessageBox.alert;
 Vue.prototype.$confirm = MessageBox.confirm;
 Vue.prototype.$prompt = MessageBox.prompt;
 Vue.prototype.$notify = Notification;
-Vue.prototype.$message = Message;
+Vue.prototype.$message = Message;*/
 
 Vue.config.productionTip = false;
 
-import NavItem from './components/NavItem';
-Vue.use(NavItem);
+// import NavItem from './components/NavItem';
+// Vue.use(NavItem);
 // Vue.use(ElementUI);
 
 /* eslint-disable no-new */

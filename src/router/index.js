@@ -10,7 +10,7 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
-    } , {
+    }, {
       path: '/main',
       name: 'VueMain',
       component: VueMain
