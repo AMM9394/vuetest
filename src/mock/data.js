@@ -5,49 +5,31 @@
 // const userLogo = require('../images/user.png');
 export const submenu = [
   {
-    title: '信息服务',
+    title: 'demos',
     // icon:infoLogo,
     submenu: [
       {
-        title: '个人信息管理',
-        url: '#/personal'
+        title: 'todo-demo',
+        url: '/todo'
       }, {
-        title: '工资查询',
+        title: '目录1-2',
         url: '#/salary'
       }, {
-        title: '医疗记录',
-        url: '#/test'
-      }, {
-        title: '供给关系',
-        url: '#/test'
-      }, {
-        title: '被服领取',
-        url: '#/uniform'
-      }, {
-        title: '住房查询',
-        url: '#/house'
-      }, {
-        title: '保障标准',
-        url: '#/test'
-      }, {
-        title: '保障卡管理',
+        title: '目录1-3',
         url: '#/test',
         submenu: [
           {
-            title: '当前卡信息',
+            title: '目录1-3-1',
             url: '#/bzkbasic'
           }, {
-            title: '补换卡申请',
-            url: '#/test'
-          }, {
-            title: '历史记录',
+            title: '目录1-3-2',
             url: '#/test'
           }
         ]
       }
     ]
   }, {
-    title: '用户管理',
+    title: '目录2',
     url: '#/test'
     // icon:userLogo,
   }

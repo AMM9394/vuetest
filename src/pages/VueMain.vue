@@ -5,11 +5,15 @@
         <el-menu
           default-active="2"
           class="el-menu-vertical-demo"
+          @select="handleClick"
           @open="handleOpen"
           @close="handleClose">
           <nav-item v-for="(item, index) in submenu" :item="item" :navIndex="String(index)" :key="index">
           </nav-item>
         </el-menu>
+      </el-col>
+      <el-col :span="18">
+        <router-view></router-view>
       </el-col>
     </el-row>
   </div>
@@ -30,10 +34,14 @@ export default {
   // components: {NavItem},
   methods: {
     handleOpen (key, keyPath) {
-      console.log(key, keyPath)
+      // console.log(key, keyPath)
     },
     handleClose (key, keyPath) {
-      console.log(key, keyPath)
+      // console.log(key, keyPath)
+    },
+    handleClick (key, keyPath) {
+      this.$router.push(key)
+      // console.log(typeof key)
     }
   },
   computed: {
@@ -58,6 +66,7 @@ export default {
 .menu-left{
   background: #f3eff3;
   min-height: calc(100vh - 10px);
+  height: 100%;
 }
 .main-page .el-submenu__title:hover, .main-page .el-submenu__title:focus{
   background-color: #efd9eb;
