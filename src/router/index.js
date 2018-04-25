@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import Test from '@/components/Test'
 import VueMain from '@/pages/VueMain'
 import ToDoDemo from '@/pages/ToDoDemo'
 Vue.use(Router)
@@ -8,7 +9,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/hello',
       name: 'HelloWorld',
       component: HelloWorld
     }, {
@@ -19,6 +20,10 @@ export default new Router({
       path: '/todo',
       name: 'ToDoDemo',
       component: ToDoDemo
+    }, {
+      path: '/test',
+      name: 'Test',
+      component: Test
     }
   ]
 })

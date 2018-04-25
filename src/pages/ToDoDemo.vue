@@ -1,11 +1,12 @@
 <template>
   <div class="todo">
-    <a v-link="{ path: '/main'}">返回目录</a>
-    <h3 class="title">{{message}}</h3>
+    <!--<router-link to="/">返回目录</router-link>-->
+    <h3 class="title">{{message1}}</h3>
+    <h3 class="title">{{message2}}</h3>
     <input v-model="newItem" v-on:keyup.enter="addNew"/>
     <ul>
-      <li v-for="(item, key) in items" :key="key" v-bind:class="{isStudent: item.stident}" v-on:click="turnRed(item)">
-        {{item.name}}
+      <li v-for="(item, key) in items" :key="key" v-bind:class="{isStudent: item.student}" v-on:click="transColor(item)">
+        {{parseInt(key+1) + '.'+ item.name}}
       </li>
     </ul>
   </div>
@@ -13,27 +14,29 @@
 
 <script>
 import Storage from '../localstorage'
+import './style/todo.less'
 export default {
   name: 'ToDoDemo',
   data () {
     return {
-      message: 'This is a to do demo,please input something in the follow box',
+      message1: 'This is a demo.',
+      message2: 'Now please input something in the following box and end with the enter key.',
       items: Storage.fetch(),
       newItem: ''
     }
   },
   methods: {
-    turnRed: function (item) {
+    transColor: function (item) {
       // 逆反布尔值
       item.student = !item.student
     },
     addNew: function () {
       this.items.push({
-        name: this.itemNew,
+        name: this.newItem,
         student: false
       })
       // 清空文本栏
-      this.itemNew = null
+      this.newItem = null
     }
   },
   watch: {
@@ -46,10 +49,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.isStudent{
-  background: aquamarine;
-  color: #fff;
-}
-</style>

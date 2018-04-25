@@ -6,6 +6,7 @@
 export const submenu = [
   {
     title: 'demos',
+    iconName: 'el-icon-document',
     // icon:infoLogo,
     submenu: [
       {
@@ -13,24 +14,24 @@ export const submenu = [
         url: '/todo'
       }, {
         title: '目录1-2',
-        url: '#/salary'
+        url: '/test'
       }, {
         title: '目录1-3',
-        url: '#/test',
+        url: '/test',
         submenu: [
           {
             title: '目录1-3-1',
-            url: '#/bzkbasic'
+            url: '/test'
           }, {
             title: '目录1-3-2',
-            url: '#/test'
+            url: '/test'
           }
         ]
       }
     ]
   }, {
     title: '目录2',
-    url: '#/test'
+    url: '/test'
     // icon:userLogo,
   }
 ]

@@ -2,14 +2,24 @@
   <div id="app">
     <!--<img src="./assets/logo.png">-->
     <div class="header"/>
-    <router-view/>
+    <div>
+      <el-row>
+        <el-col :span="6">
+          <vue-main/>
+        </el-col>
+        <el-col :span="18">
+          <router-view/>
+        </el-col>
+      </el-row>
+    </div>
   </div>
 </template>
 
 <script>
-
+import VueMain from './pages/VueMain'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {VueMain}
 }
 </script>
 
