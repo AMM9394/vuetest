@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import {submenu} from '../mock/data.js'
+import { URL } from '../mock/data.js'
 import NavItem from '../components/NavItem'
 import './style/main.less'
 // import NavItem from '../components/NavItem'
@@ -22,11 +22,10 @@ export default {
   components: {NavItem},
   data () {
     return {
-      submenu,
+      submenu: [],
       defaultOpenkeys: ['0']
     }
   },
-  // components: {NavItem},
   methods: {
     handleOpen (key, keyPath) {
       // console.log(key, keyPath)
@@ -44,6 +43,18 @@ export default {
     onRoutes () {
       return this.$router.path
     }
+  },
+  created: function () {
+    // GET /someUrl
+    this.$http.get(URL + 'navlist').then(function (response) {
+      // const that = this
+      // console.log(response.data.submenu)
+      this.submenu = response.data.submenu
+      // get body data
+      // this.someData = response.body;
+    }, response => {
+      console.log('error')
+    })
   }
   // components:{
   //   NavItem

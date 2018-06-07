@@ -35,3 +35,4 @@ export const submenu = [
     // icon:userLogo,
   }
 ]
+export const URL = 'https://www.easy-mock.com/mock/5b1741022de86c43cc2dc70d/test/'

@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import 'babel-polyfill'
 // import ElementUI from 'element-ui';
+import VueResource from 'vue-resource'
 import 'element-ui/lib/theme-chalk/index.css'
 import {
   Pagination,
@@ -71,6 +72,7 @@ import {
   Footer
 } from 'element-ui'
 
+Vue.use(VueResource)
 Vue.use(Pagination)
 Vue.use(Dialog)
 Vue.use(Autocomplete)
